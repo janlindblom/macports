@@ -1,0 +1,16 @@
+# $Id$
+
+PortSystem          1.0
+name                mp3cddb
+version             0.2
+categories          audio
+platforms           darwin
+maintainers         lindblom.jan@gmail.com
+description         Tag full albums of MP3 files using CDDB.
+
+git.url             git://github.com/janlindblom/mp3cddb.git
+git.branch          master
+
+depends_lib         port:perl5 \
+                    port:p5-cddb \
+                    port:p5-mp3-info
