@@ -7,10 +7,17 @@ categories          audio
 platforms           darwin
 maintainers         lindblom.jan@gmail.com
 description         Tag full albums of MP3 files using CDDB.
-
+long_description    ${description}
+fetch.type          git
 git.url             git://github.com/janlindblom/mp3cddb.git
-git.branch          master
+git.branch          origin/version_0_2
 
 depends_lib         port:perl5 \
                     port:p5-cddb \
-                    port:p5-mp3-info
+                    port:p5-mp3-info \
+                    port:mp3info
+
+checksums           mp3cddb \
+                        md5     2fcd2c4bee3833ade1802fffefd689d6 \
+                    mp3cddbtag \
+                        md5     cc97a3c0da77904ac49f66df85063852
