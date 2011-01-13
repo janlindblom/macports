@@ -1,0 +1,2 @@
+p5-cddb 351
+portdir perl/p5-cddb description {a high-level interface to cddb protocol servers.} homepage http://search.cpan.org/dist/CDDB/ epoch 0 platforms darwin name p5-cddb depends_lib path:bin/perl:perl5 license unknown maintainers openmaintainer long_description {{a high-level interface to cddb protocol servers.}} categories perl version 1.220 revision 0

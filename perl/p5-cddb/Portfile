@@ -1,0 +1,16 @@
+# $Id:$
+
+PortSystem          1.0
+PortGroup           perl5 1.0
+perl5.setup         CDDB 1.220
+maintainers         openmaintainer
+description         a high-level interface to cddb protocol servers.
+long_description    ${description}
+
+platforms           darwin
+
+checksums           md5     56e0ba3f347e1b14f41f340f0cb3be3a \
+                    sha1    dab0787db2219882bf1a5f0338d31aa9d4bc2049 \
+                    rmd160  9e3ea67dc0cb806b48ef262bc412035d36693d02
+
+supported_archs noarch
