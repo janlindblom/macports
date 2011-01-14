@@ -17,6 +17,8 @@ depends_lib         port:perl5 \
                     port:p5-mp3-info \
                     port:mp3info
 
+patchfiles          patch-mp3cddb.diff
+
 checksums           mp3cddb \
                         md5     2fcd2c4bee3833ade1802fffefd689d6 \
                     mp3cddbtag \

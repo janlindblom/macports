@@ -1,4 +1,4 @@
-mp3cddb 280
-variants universal portdir audio/mp3cddb description {Tag full albums of MP3 files using CDDB.} epoch 0 platforms darwin name mp3cddb depends_lib {port:perl5 port:p5-cddb port:p5-mp3-info} license unknown maintainers lindblom.jan@gmail.com categories audio version 0.2 revision 0
+mp3cddb 386
+variants universal portdir audio/mp3cddb description {Tag full albums of MP3 files using CDDB.} depends_fetch bin:git:git-core epoch 0 platforms darwin name mp3cddb depends_lib {port:perl5 port:p5-cddb port:p5-mp3-info port:mp3info} long_description {{Tag full albums of MP3 files using CDDB.}} maintainers lindblom.jan@gmail.com license unknown categories audio version 0.2 revision 0
 p5-cddb 351
 portdir perl/p5-cddb description {a high-level interface to cddb protocol servers.} homepage http://search.cpan.org/dist/CDDB/ epoch 0 platforms darwin name p5-cddb depends_lib path:bin/perl:perl5 license unknown maintainers openmaintainer long_description {{a high-level interface to cddb protocol servers.}} categories perl version 1.220 revision 0
