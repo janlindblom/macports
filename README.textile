@@ -2,4 +2,5 @@ h1. MacPorts by Jan
 
 These are the current "MacPorts":http://www.macports.org/ I've made:
 
-* p5-cddb, "CDDB":http://search.cpan.org/~rcaputo/CDDB-1.220/lib/CDDB.pm
+* p5-cddb: "CDDB on CPAN":http://search.cpan.org/~rcaputo/CDDB-1.220/lib/CDDB.pm
+* mp3cddb: "mp3cddb on github":https://github.com/janlindblom/mp3cddb
