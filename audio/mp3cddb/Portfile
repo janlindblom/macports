@@ -10,7 +10,7 @@ description         Tag full albums of MP3 files using CDDB.
 long_description    ${description}
 fetch.type          git
 git.url             git://github.com/janlindblom/mp3cddb.git
-git.branch          origin/version_0_2
+git.branch          origin/master
 
 depends_lib         port:perl5 \
                     port:p5-cddb \

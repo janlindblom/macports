@@ -1,0 +1,24 @@
+# $Id:$
+
+PortSystem          1.0
+PortGroup           perl5 1.0
+perl5.setup         Net-Dropbox-API 1.0
+maintainers         openmaintainer
+description         The Dropbox API is a OAuth based API.
+long_description    ${description}
+homepage            http://search.cpan.org/~norbu/Net-Dropbox-API-1.0/lib/Net/Dropbox/API.pm
+
+# Fetching from github since it's not indexed at CPAN.
+fetch.type          git
+git.url             git://github.com/norbu09/Net--Dropbox.git
+git.branch          origin/master
+
+depends_lib         port:p5-module-install
+
+platforms           darwin
+
+checksums           md5     ce8d14ca40a7930e9b146a5fba84e9dc \
+                    sha1    9daeef503821cc590f3cd176399508619d61feb1 \
+                    rmd160  a764c19b03ab8f04b04989738fd73311f5ed2eae
+
+supported_archs noarch
