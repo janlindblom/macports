@@ -1,0 +1,23 @@
+# $Id$
+
+PortSystem          1.0
+name                jsmin
+version             0.2
+categories          devel
+platforms           darwin
+maintainers         Jan Lindblom <lindblom.jan@gmail.com>
+description         Minify JavaScript code.
+long_description    ${description}
+master_sites        http://www.crockford.com/javascript
+homepage            http://crockford.com/javascript/jsmin
+distfiles           jsmin.c
+
+configure {}
+
+build {
+	${configure.compiler} -o ${workpath}/jsmin ${workpath}/jsmin.c
+}
+
+checksums	md5		1bd671048da331b899902379411b72df \
+			sha1	8a6b3b980a52c028eb73aee4a82ebe060c1ee854 \
+			rmd160	5494b4ed94d7423cfb0db4c9fe931d7f3c40a797
