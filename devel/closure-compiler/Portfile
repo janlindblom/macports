@@ -1,0 +1,20 @@
+# $Id$
+
+PortSystem          1.0
+name                closure-compiler
+version             @r1314
+categories          devel
+platforms           darwin
+maintainers         Jan Lindblom <lindblom.jan@gmail.com>
+description         Minify JavaScript code.
+long_description    ${description}
+homepage            
+fetch.type			svn
+svn.url				http://closure-compiler.googlecode.com/svn/trunk
+svn.revision		1314
+worksrcdir			${name}/trunk
+
+depends_build       bin:ant:apache-ant
+use_configure       no
+build.cmd           ant
+build.target        jar
