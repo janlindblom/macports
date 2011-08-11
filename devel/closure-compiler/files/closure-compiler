@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+java -jar __LIBDIR__/closure-compiler/compiler.jar
