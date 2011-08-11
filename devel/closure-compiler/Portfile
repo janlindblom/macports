@@ -2,19 +2,55 @@
 
 PortSystem          1.0
 name                closure-compiler
-version             @r1314
+version             20110804
 categories          devel
 platforms           darwin
 maintainers         Jan Lindblom <lindblom.jan@gmail.com>
-description         Minify JavaScript code.
-long_description    ${description}
-homepage            
-fetch.type			svn
-svn.url				http://closure-compiler.googlecode.com/svn/trunk
-svn.revision		1314
-worksrcdir			${name}/trunk
+description         Closure Compiler is a JavaScript optimizing compiler.
+long_description    Closure Compiler is a JavaScript optimizing compiler. \
+					It parses your JavaScript, analyzes it, removes dead code \
+					and rewrites and minimizes what's left. It also checks \
+					syntax, variable references, and types, and warns about \
+					common JavaScript pitfalls. It is used in many of Google's \
+					JavaScript apps, including Gmail, Google Web Search, \
+					Google Maps, and Google Docs.
+homepage            http://code.google.com/closure/compiler/
+master_sites		http://closure-compiler.googlecode.com/files
+distfiles			compiler-latest.zip
+use_zip				yes
+worksrcdir          ${name}
+extract.mkdir       yes
 
-depends_build       bin:ant:apache-ant
-use_configure       no
-build.cmd           ant
-build.target        jar
+use_build			no
+
+pre-extract {
+	file mkdir ${worksrcpath}
+	file copy ${filespath}/closure-compiler ${worksrcpath}
+}
+
+configure {
+	reinplace "s|__LIBDIR__|${prefix}/share/java|g" \
+		${worksrcpath}/closure-compiler
+}
+
+build { }
+
+destroot {
+	xinstall -m 755 -d \
+		${destroot}${prefix}/share/java/${name} \
+		${destroot}${prefix}/share/doc/${name}
+		
+	file copy ${worksrcpath}/compiler.jar \
+		${destroot}${prefix}/share/java/${name}
+	file copy ${worksrcpath}/closure-compiler \
+		${destroot}${prefix}/bin
+
+	file copy ${worksrcpath}/README \
+		${destroot}${prefix}/share/doc/${name}
+	file copy ${worksrcpath}/COPYING \
+		${destroot}${prefix}/share/doc/${name}
+}
+
+checksums			md5		a09f002843fdd93d3beef124e58e8db6 \
+					sha1	6c2d64612bb857bb17c75f4a40fdff12b9319454 \
+					rmd160	0688cfac0d1f8919954902012a2a1e81eb64074f
